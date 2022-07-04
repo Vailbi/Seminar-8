@@ -1,7 +1,7 @@
 ﻿// Задача 54: Задайте двумерный массив. 
 // Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
 
-int [,] matrix = new int[3,4];
+int [,] matrix = new int[5,5];
 
 void FillArray(int [,] matr) // заполнение матрицы случайными числами
 {
@@ -9,7 +9,7 @@ void FillArray(int [,] matr) // заполнение матрицы случай
     {   
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i,j] = new Random().Next(1,15);
+            matr[i,j] = new Random().Next(0,10);
             
         }
     }
@@ -32,31 +32,26 @@ void PrintArray(int [,] matr) // печать матрицы
 PrintArray(matrix);
 
 
-void SortMatrix(int [,] matr)
+void SortMatrix(int [,] matr) // сортировка строк по убыванию
 {
- int temp = 0;
- int i = 0;
- 
-     while (i < matr.GetLength(0))
+int temp = 0;
+int step = 0;
+while (step<matr.GetLength(1)+1)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        int step = 0;
         for (int j = 0; j < matr.GetLength(1)-1; j++) 
         {
-            while (step<matr.GetLength(1))
+            if (matr[i,j]<matr[i,j+1] )
             {
-                if (matr[i,j]<matr[i,j+1] )
-                {
-                    temp = matr[i,j];
-                    matr[i,j] = matr[i,j+1];
-                    matr[i,j+1] = temp;
-                    
-                }
-                step++;
+                temp = matr[i,j];
+                matr[i,j] = matr[i,j+1];
+                matr[i,j+1] = temp;
             }
-            
         }
-        i++;
     }
+step++;   
+}
     PrintArray(matr);
 }
 
