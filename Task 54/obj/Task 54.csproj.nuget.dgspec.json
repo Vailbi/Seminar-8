@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Geekbrains\\home\\Seminar 8\\Task 54\\Task 54.csproj": {}
+    "/Users/appleid/Documents/С#/Seminar 8/Task 54/Task 54.csproj": {}
   },
   "projects": {
-    "E:\\Geekbrains\\home\\Seminar 8\\Task 54\\Task 54.csproj": {
+    "/Users/appleid/Documents/С#/Seminar 8/Task 54/Task 54.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Geekbrains\\home\\Seminar 8\\Task 54\\Task 54.csproj",
+        "projectUniqueName": "/Users/appleid/Documents/С#/Seminar 8/Task 54/Task 54.csproj",
         "projectName": "Task 54",
-        "projectPath": "E:\\Geekbrains\\home\\Seminar 8\\Task 54\\Task 54.csproj",
-        "packagesPath": "C:\\Users\\Федор\\.nuget\\packages\\",
-        "outputPath": "E:\\Geekbrains\\home\\Seminar 8\\Task 54\\obj\\",
+        "projectPath": "/Users/appleid/Documents/С#/Seminar 8/Task 54/Task 54.csproj",
+        "packagesPath": "/Users/appleid/.nuget/packages/",
+        "outputPath": "/Users/appleid/Documents/С#/Seminar 8/Task 54/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Федор\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/appleid/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
         }
       }
     }
