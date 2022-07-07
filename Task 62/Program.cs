@@ -51,7 +51,36 @@ while (col<3 && matrix[row,col+1]==0)
     FillImgRight(row,col);
     col++;
 }
-
+while (row<3 && matrix[row+1,col]==0)
+{
+    FillImgDown(row,col);
+    row++;
+}
+while (col>0 && matrix[row,col-1]==0)
+{
+    FillImgLeft(row,col);
+    col--;
+}
+while (row>0 && matrix[row-1,col]==0)
+{
+    FillImgUp(row,col);
+    row--;
+}
+while (col<3 && matrix[row,col+1]==0)
+{
+    FillImgRight(row,col);
+    col++;
+}
+while (row<3 && matrix[row+1,col]==0)
+{
+    FillImgDown(row,col);
+    row++;
+}
+while (col>0 && matrix[row,col-1]==0)
+{
+    FillImgLeft(row,col);
+    col--;
+}
 // FillImgRight(row,col);
 // col++;
 // FillImgRight(row,col);
