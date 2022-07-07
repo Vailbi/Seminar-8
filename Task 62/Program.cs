@@ -1,6 +1,6 @@
 ﻿// Задача 62: Заполните спирально массив 4 на 4.
 
-int [,] matrix = new int [3,3];
+int [,] matrix = new int [4,4];
 int num = 1;
 int row=0;
 int col=0;
