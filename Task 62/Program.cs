@@ -1,6 +1,6 @@
 ﻿
 
-int [,] matrix = new int [4,4];
+int [,] matrix = new int [4,5];
 int num = 1;
 int row=0;
 int col=0;
@@ -44,71 +44,31 @@ void PrintArray(int [,] matr) // печать матрицы
     }
 }
 int step = matrix.GetLength(0)*matrix.GetLength(1);
+
 FillImage(row,col);
 
-while (col<3 && matrix[row,col+1]==0)
+for (int i = 0; i < step; i++)
 {
-    FillImgRight(row,col);
-    col++;
+    if (col<matrix.GetLength(1)-1 && matrix[row,col+1]==0)
+    {
+        FillImgRight(row,col);
+        col++;
+    }
+    else if (row<matrix.GetLength(0)-1 && matrix[row+1,col]==0)
+    {
+        FillImgDown(row,col);
+        row++;
+    }
+    else if (col>0 && matrix[row,col-1]==0)
+    {
+        FillImgLeft(row,col);
+        col--;
+    }
+    else while (row>0 && matrix[row-1,col]==0)
+    {
+        FillImgUp(row,col);
+        row--;
+    }
 }
-while (row<3 && matrix[row+1,col]==0)
-{
-    FillImgDown(row,col);
-    row++;
-}
-while (col>0 && matrix[row,col-1]==0)
-{
-    FillImgLeft(row,col);
-    col--;
-}
-while (row>0 && matrix[row-1,col]==0)
-{
-    FillImgUp(row,col);
-    row--;
-}
-while (col<3 && matrix[row,col+1]==0)
-{
-    FillImgRight(row,col);
-    col++;
-}
-while (row<3 && matrix[row+1,col]==0)
-{
-    FillImgDown(row,col);
-    row++;
-}
-while (col>0 && matrix[row,col-1]==0)
-{
-    FillImgLeft(row,col);
-    col--;
-}
-// FillImgRight(row,col);
-// col++;
-// FillImgRight(row,col);
-// col++;
-// FillImgRight(row,col);
-// col++;
-// FillImgDown(row,col);
-// row++;
-// FillImgDown(row,col);
-// row++;
-// FillImgDown(row,col);
-// row++;
-// FillImgLeft(row,col);
-// col--;
-// FillImgLeft(row,col);
-// col--;
-// FillImgLeft(row,col);
-// col--;
-// FillImgUp(row,col);
-// row--;
-// FillImgUp(row,col);
-// row--;
-// FillImgRight(row,col);
-// col++;
-// FillImgRight(row,col);
-// col++;
-// FillImgDown(row,col);
-// row++;
-// FillImgLeft(row,col);
 
 PrintArray(matrix);
