@@ -3,7 +3,7 @@
 
 int [,] matrixOne = new int[3,3];
 int [,] matrixTwo = new int[3,3];
-//int [,] resultMatrix = new int[3,3];
+
 void FillArray(int [,] matr) // заполнение матрицы случайными числами
 {
     for (int i = 0; i < matr.GetLength(0); i++)  
@@ -50,7 +50,7 @@ void ProductOfMatrix(int[,] matr1, int[,] matr2)
             }
         }
     }
-    
+
     PrintArray(resultMatrix);
 }
 

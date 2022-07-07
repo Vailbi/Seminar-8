@@ -4,29 +4,27 @@ int [,] matrix = new int [4,4];
 int num = 1;
 int row=0;
 int col=0;
-void FillImage (int row, int col)
+void FillImage (int row, int col) // заполнение первой ячейка
 {
     matrix[row,col] = num;
     num++;
 }
-void FillImgRight (int row, int col)
+void FillMatrixRight (int row, int col) // движение вправо
 {
     matrix[row,col+1] = num;
     num++;
 }
-void FillImgDown (int row, int col)
+void FillMatrixDown (int row, int col) // движение вниз
 {
     matrix[row+1,col] = num;
     num++;
 }
-
-void FillImgLeft (int row, int col)
+void FillImgLeft (int row, int col) // движение влево
 {
     matrix[row,col-1] = num;
     num++;
 }
-
-void FillImgUp (int row, int col)
+void FillImgUp (int row, int col) // движение вверх
 {
     matrix[row-1,col] = num;
     num++;
@@ -47,16 +45,16 @@ int step = matrix.GetLength(0)*matrix.GetLength(1);
 
 FillImage(row,col);
 
-for (int i = 0; i < step; i++)
+for (int i = 0; i < step; i++) //цикл для заполнения матрицы
 {
     if (col<matrix.GetLength(1)-1 && matrix[row,col+1]==0)
     {
-        FillImgRight(row,col);
+        FillMatrixRight(row,col);
         col++;
     }
     else if (row<matrix.GetLength(0)-1 && matrix[row+1,col]==0)
     {
-        FillImgDown(row,col);
+        FillMatrixDown(row,col);
         row++;
     }
     else if (col>0 && matrix[row,col-1]==0)
